@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sushant Janwade | Loading...</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body style="display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 0;">
+
+  <div id="intro-screen" style="position: relative; inset: auto; cursor: pointer;">
+    <div class="intro-box">
+      <div class="intro-top-badges">
+        <span class="intro-badge active">• SYSTEM READY</span>
+        <span class="intro-badge">PORTFOLIO 2026</span>
+        <span class="intro-badge">UI LOADING</span>
+      </div>
+
+      <div class="intro-body">
+        <div class="intro-left">
+          <h1>Welcome to<br>my Portfolio<br>Website</h1>
+          <p>Building modern, reliable, and fast digital experiences with a focus on clean UI and solid engineering.</p>
+          
+          <div class="live-status-title">LIVE STATUS</div>
+          <div class="intro-status-pills">
+            <span class="intro-status-pill">&lt;/&gt; CODE</span>
+            <span class="intro-status-pill">👤 PROFILE</span>
+            <span class="intro-status-pill">⚙ SOURCE</span>
+          </div>
+          <div class="intro-domain">🌐 www.sushant.dev</div>
+        </div>
+
+        <div class="intro-right hud-container">
+          <div class="hud-header">
+            <span>CORE UI</span>
+            <span>ONLINE</span>
+          </div>
+
+          <div class="hud-circle-wrapper">
+            <div class="hud-node node-top">4</div>
+            <div class="hud-node node-right">18</div>
+            <div class="hud-node node-bottom">2</div>
+            <div class="hud-node node-left">5/6</div>
+            <div class="hud-circle-inner">
+              <span>WELCOME</span>
+            </div>
+          </div>
+
+          <div class="hud-footer">
+            <div class="hud-stat">
+              <strong>04</strong>
+              <span>Projects</span>
+            </div>
+            <div class="hud-stat">
+              <strong>12ms</strong>
+              <span>Stable</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 3 Seconds auto-redirect to home.html
+    const redirectTimer = setTimeout(() => {
+      window.location.replace("home.html");
+    }, 3000);
+
+    // Click anywhere to skip instantly
+    document.getElementById('intro-screen').addEventListener('click', () => {
+      clearTimeout(redirectTimer);
+      window.location.replace("home.html");
+    });
+  </script>
+</body>
+</html>

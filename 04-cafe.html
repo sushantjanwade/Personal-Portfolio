@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Cafe - EliteStay</title>
+    <link rel="stylesheet" href="01-style.css">
+    <link rel="stylesheet" href="04-cafe.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+<div id="premium-loader">
+    <div class="luxury-spinner"></div>
+    <div class="loader-text">EliteStay</div>
+</div>
+
+<nav>
+    <div class="hamburger-menu" id="mobile-toggle">☰</div>
+
+    <div class="logo">
+        <h2>EliteStay</h2>
+        <p>Luxury Hotel & Resort</p>
+    </div>
+
+    <div class="menu" id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="02-room.html">Rooms</a>
+        <a href="03-restaurant.html">Restaurant</a>
+        <a href="04-cafe.html">Cafe</a>
+        <a href="05-contact.html">Contact</a>
+    </div>
+
+    <div class="booking">
+        <a href="06-booking.html">
+            <button>Book Now</button>
+        </a>
+    </div>
+</nav>
+
+<section class="cafe-hero">
+    <div class="cafe-overlay">
+        <h1>Our Cafe</h1>
+        <p>Home • Cafe</p>
+    </div>
+</section>
+
+<section class="cafe-heading">
+    <h2>Welcome To Our Cafe</h2>
+    <p>
+        Enjoy freshly brewed coffee, delicious beverages and delightful snacks
+        in a warm and relaxing atmosphere.
+    </p>
+</section>
+
+<section class="coffee-section">
+    <div class="coffee-card">
+        <img src="coffee1.jpg" alt="Espresso">
+        <h3>Espresso</h3>
+        <p>Strong and aromatic coffee prepared with premium roasted beans.</p>
+    </div>
+
+    <div class="coffee-card">
+        <img src="coffee2.jpg" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>Smooth espresso blended with creamy milk foam.</p>
+    </div>
+
+    <div class="coffee-card">
+        <img src="coffee3.jpg" alt="Cold Coffee">
+        <h3>Cold Coffee</h3>
+        <p>Refreshing chilled coffee served with whipped cream.</p>
+    </div>
+</section>
+
+<section class="drinks">
+    <h2>Popular Drinks</h2>
+
+    <div class="drink-container">
+        <div class="drink-card">
+            <img src="drink1.jpg" alt="Cafe Latte">
+            <h3>Cafe Latte</h3>
+            <p>₹220</p>
+        </div>
+
+        <div class="drink-card">
+            <img src="drink2.jpg" alt="Mocha">
+            <h3>Mocha</h3>
+            <p>₹240</p>
+        </div>
+
+        <div class="drink-card">
+            <img src="drink3.jpg" alt="Hot Chocolate">
+            <h3>Hot Chocolate</h3>
+            <p>₹180</p>
+        </div>
+
+        <div class="drink-card">
+            <img src="drink4.jpg" alt="Iced Americano">
+            <h3>Iced Americano</h3>
+            <p>₹200</p>
+        </div>
+    </div>
+</section>
+
+<section class="visit-cafe">
+    <div class="visit-box">
+        <div>
+            <h2>Visit Our Cafe Today</h2>
+            <p>
+                Enjoy handcrafted coffee, tasty desserts and a peaceful
+                atmosphere with your friends and family.
+            </p>
+        </div>
+        <a href="04-cafe.html">
+            <button class="visit-btn">Visit Now</button>
+        </a>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-box">
+            <h2>EliteStay</h2>
+            <p>Stay • Dine • Relax</p>
+            <p>Experience luxury and comfort like never before.</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="02-room.html">Rooms</a></li>
+                <li><a href="03-restaurant.html">Restaurant</a></li>
+                <li><a href="04-cafe.html">Cafe</a></li>
+                <li><a href="05-contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-box">
+            <h3>Our Services</h3>
+            <ul>
+                <li>Luxury Rooms</li>
+                <li>Fine Dining</li>
+                <li>Cafe</li>
+                <li>Banquet Hall</li>
+                <li>Spa & Wellness</li>
+            </ul>
+        </div>
+
+        <div class="footer-box">
+            <h3>Contact Us</h3>
+            <p>123A Ocean View Drive</p>
+            <p>Goa, India - 403001</p>
+            <p>+91 98765 43210</p>
+            <p>info@elitestay.com</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+        <p>© 2026 EliteStay. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+<script>
+    // ⏳ Premium Loader Smooth Fade-Out Logic
+    window.addEventListener('load', () => {
+        const loader = document.getElementById('premium-loader');
+        if (loader) {
+            loader.classList.add('loader-hidden');
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 400); // 0.4s transition backup time
+        }
+    });
+
+    // ☰ Hamburger Dropdown Menu Toggle Engine
+    const toggleBtn = document.getElementById('mobile-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (toggleBtn && navMenu) {
+        toggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navMenu.classList.toggle('active');
+        });
+
+        // Dropdown menu ke bahar click karne par menu auto-close ho jaye
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && e.target !== toggleBtn) {
+                navMenu.classList.remove('active');
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
