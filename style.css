@@ -1091,3 +1091,57 @@ textarea.input-field { min-height: 120px; resize: vertical; }
     font-size: 16px;
   }
 }
+/* ==========================================
+   HAMBURGER MENU STYLING
+   ========================================== */
+.menu-toggle {
+  display: none;
+  font-size: 22px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+    display: none !important;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    display: flex !important;
+  }
+
+  .nav-links li a {
+    font-size: 16px;
+  }
+}
